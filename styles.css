@@ -1,0 +1,529 @@
+* {
+  cursor: url(images/cursor2.png), auto ;
+}
+
+.desktop {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body.desktop {
+  margin: 0;
+  padding: 0;
+  background: teal;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.desktop-icon { 
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.desktop-icon > .icon {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  margin: 0 auto;
+}
+
+.desktop-icon p {
+  color: #ead2ac; 
+  font-size: 1.2rem;
+  font-family: 'Pixelify Sans', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  margin-top: 5px;
+
+}
+.desktop-icon:hover {
+  animation: glitch 0.5s infinite;
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+/* Contact form styles */
+
+#contact-window{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f0e6d2;
+  border: 2px solid #584d3d;
+  border-radius: 5px;
+  width: 400px;
+  height: 550px;
+  padding: 20px;
+  z-index: 1000; /* ensures it appears above other elements */
+}
+
+#contact-form{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f0e6d2;
+  border: 2px solid #584d3d;
+  border-radius: 5px;
+  width: 400px;
+  height: 300px;
+  padding: 20px;
+  z-index: 1000; /* ensures it appears above other elements */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.5rem; 
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #1e2d3f; /* text color */
+}
+input[type="text"],
+input[type="email"],
+
+textarea {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem; 
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+button[type="submit"] {
+  background: #584d3d;
+  color: #f0e6d2;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem; 
+  font-family: 'Pixelify Sans', sans-serif;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+  background: #f4e1c3;
+  color: #1e2d3f;
+  animation: glitch 0.5s infinite;
+}
+
+
+.intro {
+  text-align: center;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column; /* stacks children vertically */
+  align-items: center;    /* centers children horizontally */
+}
+
+
+
+.intro-picture
+  {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background: url(images/profile-pic2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+.intro-picture::before
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 600px;
+    background: url(images/profile-pic2.png);
+    background-size: cover; /* contain for split effect */
+    opacity: .5;
+    mix-blend-mode: hard-light;
+    animation: glitch2 5s linear infinite;
+  }
+
+.intro-picture :hover:before
+{
+	animation: glitch1 1s linear infinite;
+}
+
+@keyframes glitch1
+{
+	0%
+	{
+		background-position: 0 0;
+		filter: hue-rotate(0deg);
+	}
+	10%
+	{
+		background-position: 5px 0;
+	}
+	20%
+	{
+		background-position: -5px 0;
+	}
+	30%
+	{
+		background-position: 15px 0;
+	}
+	40%
+	{
+		background-position: -5px 0;
+	}
+	50%
+	{
+		background-position: -25px 0;
+	}
+	60%
+	{
+		background-position: -50px 0;
+	}
+	70%
+	{
+		background-position: 0 -20px;
+	}
+	80%
+	{
+		background-position: -60px -20px;
+	}
+	81%
+	{
+		background-position: 0 0;
+	}
+	100%
+	{
+		background-position: 0 0;
+		filter: hue-rotate(360deg);
+	}
+}
+
+@keyframes glitch2
+{
+	0%
+	{
+		background-position: 0 0;
+		filter: hue-rotate(0deg);
+	}
+	10%
+	{
+		background-position: 15px 0;
+	}
+	15%
+	{
+		background-position: -15px 0;
+	}
+	20%
+	{
+		filter: hue-rotate(360deg);
+	}
+  25%
+	{
+		background-position: 0 0;
+		filter: hue-rotate(0deg);
+	}
+  100%
+	{
+		background-position: 0 0;
+		filter: hue-rotate(0deg);
+	}
+}
+
+/* Retro text animation */
+.retro-text {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 4.5rem; /* slightly larger font size */
+  color: #f4e1c3; /* text color */
+  overflow: hidden;              /* Ensures the text does not wrap */
+  white-space: nowrap;           /* Prevents text from breaking into a new line */
+  display: inline-block;         /* Needed for the width animation */
+  border-right: 2px solid ##f4e1c3;/* Simulated cursor */
+  margin-top: 50px;
+  animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.retro-text > span {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 30px ; 
+  color: #f4e1c3; /* text color */
+  display: inline-block; /* allows width animation */
+  width: 100%; /* ensures the text takes full width */
+  overflow: hidden;              /* Ensures the text does not wrap */
+  white-space: nowrap;
+  animation: typing 5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing effect: expand the width from 0 to 100% */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking caret effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #f4e1c3; }
+}
+
+.taskbar {
+  position: fixed; /* ensures the taskbar remains at the bottom */
+  bottom: 0;
+  width: 100%;
+  background: #f4e1c3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* space between start button and clock */
+  padding: 2px 10px;
+  border-top: 2px solid hsla(60, 24%, 96%, 1);
+  height: 50px; /* slightly reduced height */
+  cursor: url(cursor2.png), auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.clock {
+  font-size: 1.5rem;
+  color: #1e2d3f;
+  font-family: 'VT323', monospace;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4e1c3;
+  padding: 4px 8px;
+  height: 100%; 
+
+}
+
+.start-button {
+  background: #f4e1c3;
+  height: 100%; /* fills the taskbar's height */
+  font-size: 3rem;/* reduced font size from 3rem */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 8px;
+}
+
+.start-button > img {
+  width: 42px; /* reduced icon size */
+  height: 52px; /* reduced icon size */
+  margin-right: 8px; /* space between icon and text */
+  margin-bottom: 4px; /* space between icon and text */
+  vertical-align: middle; /* aligns the icon with the text */
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+  padding-top: 12px; /* aligns the icon vertically */
+}
+
+.start-button:hover {
+  animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.start-menu {
+
+  position: absolute;
+  bottom: 42px;
+  left: 4px;
+  background: #f4e1c3;
+  border: 2px outset #fff;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.start-menu ul {
+  list-style: armenian ;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.start-menu li {
+  padding: 6px 10px;
+  color: rgb(12, 12, 12); 
+  font-size: 3rem; /* slightly larger font size */
+  font-family: 'Pixelify Sans', sans-serif;
+  cursor: pointer;
+}
+.start-menu li:hover {
+  background: #000080;
+  color: hsla(63, 41%, 83%, 1);
+}
+
+.popup {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 300px;
+  z-index: 10;
+}
+
+.window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #eaba6b;
+  border: 2px solid #584d3d;
+  border-radius: 5px;
+  width: 70%;    
+  min-height: 400px;
+  padding: 15px;    
+  z-index: 100;
+}
+
+.window-body{
+  padding: 20px;
+  font-size: 2.5rem; 
+  font-family:  'Press Start 2P', 'VT323', monospace;
+  color: #1e2d2f; 
+  background: #f0e6d2; /* light background for better contrast */
+  border-radius: 5px;
+}
+
+.window-header {
+  background: #1e2d2f;
+  padding: 10px;
+  font-size: 2.5rem; /* slightly larger font size */
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #f4e1c3; /* text color */
+  border-bottom: 2px solid #584d3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-bar-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px; /* space between buttons */
+}
+
+#closebutton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: url(images/close-icon.png) no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+#closebutton:hover {
+  animation: glitch 0.5s infinite;
+}
+
+.title-bar {
+  background: #1e2d2f;
+  padding: 10px;
+  font-size: 2.5rem;
+  font-family: 'Pixelify Sans', sans-serif;
+  color: #000;
+  border-bottom: 2px solid #584d3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.skills-container {
+
+  margin-top: 60px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.skill-logo {
+  gap: 50px;
+  width: 100px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-logo:hover {
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: scale(1.1); /* slightly enlarge on hover */
+  opacity: 0.9; /* adjust opacity on hover */
+}
+
+/* Optional pulsing animation for the skill logos */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.skill-logo {
+  width: 80px;
+  animation: pulse 3s ease-in-out infinite;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
