@@ -2,7 +2,6 @@
 
 This is a personal portfolio website designed to look and feel like the classic **Windows 98 desktop environment**. It includes draggable windows, a Start menu, and a retro taskbar — all implemented with HTML, CSS, and JavaScript.
 
-![Screenshot](screenshot.png)
 
 ## 🚀 Features
 
