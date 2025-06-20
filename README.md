@@ -18,3 +18,8 @@ This is a personal portfolio website designed to look and feel like the classic 
 
 ## 📁 Project Structure
 
+portfolio_win98_desktop/
+├── index.html # Main webpage
+├── styles.css # Custom styling + overrides
+├── script.js # JS logic for window handling
+└── README.md # Project documentation
